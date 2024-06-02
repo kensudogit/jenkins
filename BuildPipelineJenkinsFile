@@ -1,0 +1,56 @@
+pipeline {
+    agent any
+    stages {
+        stage('FetchSouceRepo') {
+            steps {
+                script {
+                      //チェック処理
+                }
+                build job: 'ジョブの実行'
+            }
+        }
+        stage('CreateWorkSpace') {
+            steps {
+                parallel(
+                    //iOSジョブの実行
+                    //Androidジョブの実行
+                )
+            }
+        }
+        
+        stage('SetupCache') {
+            steps {
+                parallel(
+                    //iOSジョブの実行
+                    //Androidジョブの実行
+                )
+            }
+        }
+        
+        stage('Import') {
+            steps {
+                parallel(
+                    //iOSジョブの実行
+                    //Androidジョブの実行
+                )
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                parallel(
+                    //iOSジョブの実行
+                    //Androidジョブの実行
+                )
+            }
+        }
+        
+        stage('BackUp') {
+            steps {
+                //iOSジョブの実行
+                //Androidジョブの実行
+            }
+        }
+        
+    }
+}
